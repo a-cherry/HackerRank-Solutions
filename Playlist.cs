@@ -26,7 +26,7 @@ class Result
     );
 
     songs.Reverse(); // reverse song order to traverse the array in the "up" direction
-    var reverseOrderCurrentSong = songs.Count - currentSong - 1;
+    var reverseOrderCurrentSong = songs.Count - currentSong - 1; // Optimization: IndexOf() should have been used.
     var upPresses = pressCalculator(
       songs,
       reverseOrderCurrentSong,
