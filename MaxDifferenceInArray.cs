@@ -32,10 +32,10 @@ class Result
     var minItem = arr[0];
 
     for (int item = 1; item < arr.Count; item++) {
-      if (arr[item] - minItem > maxDiff) {
+      if (arr[item] - minItem > maxDiff) { // Optimization: maxDiff = Math.Max(maxDiff, arr[item] - minItem)
         maxDiff = arr[item] - minItem;
       }
-      if (arr[item] < minItem) {
+      if (arr[item] < minItem) { // Optimization: minItem = Math.Min(arr[item], minItem)
         minItem = arr[item];
       }     
     }
